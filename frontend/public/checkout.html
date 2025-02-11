@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ECU/GAMES</title>
+    <!-- Base Scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./images/favicon.png">
+    <!-- Animate On Scroll -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Monoton&family=Montserrat:wght@100;200;300;400;500;600;700;800&family=Nanum+Myeongjo:wght@400;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/checkout.css">
+</head>
+
+<body>
+    <!---------------------- NAVBAR ---------------------->
+    <nav class="navbar navbar-expand-sm navbar-dark navbarFont">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Brand -->
+        <a class="navbar-brand" href="index.html">
+            <img src="./images/logo-white-round.png" alt="">
+            <span id="SP">ECU</span><span id="slash">/</span><span>GAMES</span>
+        </a>
+        <span class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./store.html">Tienda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./admin.html" id="navAdmin">Admin</a>
+                </li>
+            </ul>
+        </span>
+        <a class="nav-link" id='myCart' href="cart.html" hidden>
+            Mi carrito
+        </a>
+        <a class="navlogin nav-link" href="login.html" hidden>
+            Iniciar sesion
+        </a>
+        <a class="navlogin nav-link" href="login.html" hidden>
+            Registrarse
+        </a>
+        <!-- <a class="navlogout nav-link" href="#" hidden>
+            Cerrar sesion
+        </a> -->
+        <a class="navlogout nav-link" href="#" id="logoutLink" hidden>
+            Cerrar sesión
+        </a>
+    </nav>
+
+
+    <!------------------------ MAIN BODY ----------------------->
+    <div id="checkoutDiv">
+        <h1>Checkout</h1>
+        <form class="checkoutForm">
+            <div>
+                <label for="name">Nombre</label>
+                <input id="name" type="text" required>
+            </div>
+            <div>
+                <label for="cardType">Tipo de Tarjeta</label>
+                <select id="cardType" required>
+                    <option value="visa">Visa</option>
+                    <option value="mastercard">Mastercard</option>
+                    <option value="amex">American Express</option>
+                    <option value="dinners">Diners Club</option>
+                    <option value="discover">Discover</option>
+                    <option value="jcb">JCB</option>
+                </select>
+            </div>
+            <div>
+                <label for="creditNo">Número de Tarjeta</label>
+                <input id="creditNo" type="text" required>
+            </div>
+            <div>
+                <label for="cvv">CVV</label>
+                <input id="cvv" type="text" required>
+            </div>
+            <button type="button" id="purchase" class="btn btn-info">Confirmar compra</button>
+        </form>
+    </div>
+
+    <div id="successDiv" hidden>
+        <h1>¡Compra exitosa!</h1>
+        <button onclick="window.location.href='store.html'" class="btn btn-info">
+            Volver a la Tienda
+        </button>
+        <img src="./images/successicon.png" alt="">
+        <!-- Botón para volver a la tienda -->
+        
+    </div>
+
+    <div id="noItemsDiv" hidden>
+        <h1>No hay juegos en tu Carrito!</h1>
+        <h3>Visita nuestra tienda para agregar nuevos juegos a tu colección.</h3>
+    </div>
+
+
+    <!------------------------ FOOTER ----------------------->
+    <footer class="container-fluid">
+        <div class="row m-auto">
+            <div class="col">
+                <h1>ECU/GAMES</h1>
+                <h2>Tu tienda de Videojuegos Favorita</h2>
+                <p>&copy; 2025 Desarrollo de aplicaciones Web</p>
+            </div>
+            <div class="col">
+                <ul class="d-flex justify-content-end mr-3">
+                    <li>
+                        <a href="#"><img src="./images/instagram.png" alt="" class="socialicon"></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./images/twitter.png" alt="" class="socialicon"></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./images/email.png" alt="" class="socialicon"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-------------------- My Scripts -------------------->
+    <script src="./scripts/navbarHideLogin.js"></script>
+    <script src="./scripts/logout.js"></script>
+    <script src="./scripts/purchase.js"></script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</htm

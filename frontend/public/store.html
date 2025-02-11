@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>SP/GAMES</title>
+        <!-- Base Scripts -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="./images/favicon.png">
+        <!-- Animate On Scroll -->
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Montserrat:wght@100;200;300;400;500;600;700;800&family=Nanum+Myeongjo:wght@400;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="./css/main.css">
+        <link rel="stylesheet" href="./css/store.css"> 
+    </head>
+
+<body>
+    <!---------------------- NAVBAR ---------------------->
+    <nav class="navbar navbar-expand-sm navbar-dark navbarFont">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Brand -->
+        <a class="navbar-brand" href="index.html">
+            <img src="./images/logo-white-round.png" alt="">
+            <span id="SP">ECU</span><span id="slash">/</span><span>GAMES</span>
+        </a>
+        <span class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="./store.html">Tienda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./admin.html"  id="navAdmin">Administrador</a>
+                </li>
+            </ul>
+        </span>
+        <a class="nav-link" id='myCart' href="cart.html" hidden>
+            Mi Carrito
+        </a>
+        <a class="navlogin nav-link" href="login.html" hidden>
+            Iniciar Sesión
+        </a>
+        <a class="navlogin nav-link" href="login.html" hidden>
+            Registrarse
+        </a>
+        <a class="navlogout nav-link" href="#" hidden>
+            Finalizar la sesión
+        </a>
+    </nav>
+
+
+    <!------------------------ MAIN BODY ----------------------->
+
+    <!-- HEADER --->
+    <div class="header">
+        <div class="d-flex justify-content-center col">
+            <h1 class="neon" data-text="U">ECU/<span class="flicker-slow">S</span>TO<span class="flicker-fast">R</span>E</h1>
+        </div>
+    </div>
+
+    <!-- BODY -->
+    <div class="body container-fluid">
+
+        <!-- Carousel Section -->
+        <div id="carouselIndicators" class="row carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block w-100 img-fluid" src="./images/arcanepunch.png" alt="First slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Acción</h5>
+                    <p>De ritmo rápido y emocionante.</p>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100 img-fluid" src="./images/arcaneparkour.png" alt="Second slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Aventura</h5>
+                    <p>Explora nuevos mundos</p>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100 img-fluid" src="./images/arcanecoop.png" alt="Third slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Coperativo</h5>
+                    <p>Trabajar juntos para superar los desafíos</p>
+                  </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Siguiente</span>
+            </a>
+          </div>
+
+        <!-- Games Section -->
+        <div class="row games">
+            <!-- Filter Bar -->
+            <form class="filterbar col-2">
+                <input id="searchBar" type="text" placeholder="Search">
+                <br>
+                <div class="filterCategories">
+                    <h2>Categoria:</h2>
+                    <!-- Populated by populateFilters.js -->
+                </div>
+                <div class="filterPlatforms">
+                    <h2>Plataforma:</h2>
+                    <!-- Populated by populateFilters.js -->
+                </div>
+                <button type="submit" id="applyFilters" class="btn btn-outline-light">Aplicar Filtros</button>
+            </form>
+
+            <!-- Games Listing -->
+            <div class="gamesListing col">
+                <div class="gamesHeading">
+                    <h1>Juegos</h1>
+                </div>
+                <div class="gamesListingEntries">
+                    <div class="gameNotFoundAlert ml-3" hidden>Juego no encontrado</div>
+                    <!-- Populated by populateGames.js -->
+                </div>
+                <br><br><br>
+            </div>
+        </div>
+    </div>
+
+
+    <!------------------------ FOOTER ----------------------->
+    <footer class="container-fluid">
+        <div class="row m-auto">
+            <div class="col">
+                <h1>ECU/GAMES</h1>
+                <h2>Tu biblioteca de juegos favorita.</h2>
+                <p>&copy; 2025 Desarrollo de aplicaciones Web</p>
+            </div>
+            <div class="col">
+                <ul class="d-flex justify-content-end mr-3">
+                    <li>
+                        <a href="#"><img src="./images/instagram.png" alt="" class="socialicon"></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./images/twitter.png" alt="" class="socialicon"></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./images/email.png" alt="" class="socialicon"></a>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+    </footer>
+
+
+    <!-------------------- My Scripts -------------------->
+    <script src="./scripts/navbarHideLogin.js"></script>
+    <script src="./scripts/logout.js"></script>
+    <script src="./scripts/populateGames.js"></script>
+    <script src="./scripts/populateFilters.js"></script>
+    <script src="./scripts/populateGame1.js" defer></script>
+    
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</htm

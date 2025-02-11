@@ -1,0 +1,145 @@
+#mainBody {
+    background:url('../images/arcanecave.png');
+    background-size:cover;
+    background-attachment:fixed;
+}
+
+/* Game card */
+#gameCard{
+    border-radius:1rem;
+    background:rgb(19, 19, 19);
+    color:white;
+    height:fit-content;
+    margin-top:2rem;
+    margin-bottom:2rem;
+}
+#gameCard .row{
+    margin-left:2rem;
+    margin-right:2rem;
+}
+#gameCard h1{
+    margin-top:2rem;
+}
+h2{
+    font-size:1rem;
+    font-weight:400;
+    margin-top:1rem;
+}
+#gameCard p{
+    font-size:1rem;
+    font-weight:200;
+    margin-top:-0.4rem;
+}
+#gameCard h3{
+    font-size:1.2rem;
+}
+#gameCard img{
+    height:18rem;
+    width:30rem;
+    margin-top:2rem;
+}
+#gameCard button{
+    margin-bottom:2rem;
+}
+
+/* Write Review Card */
+#writeReviewCard {
+    border-radius:1rem;
+    background:rgb(19, 19, 19);
+    color:white;
+    min-height:3rem;
+    height:fit-content;
+    padding:1rem;
+    margin-bottom:2rem;
+    width:50%;
+}
+#writeReviewCard textarea{
+    background:rgb(231, 231, 231);
+    padding-left:0.3rem;
+    margin:auto;
+}
+#writeReviewCard textarea:hover{
+    background:rgb(255, 255, 255);
+}
+#writeReviewCard button{
+    float:right;
+}
+.rate {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    visibility:hidden;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+
+/* Show Review Card */
+#showReviewCard {
+    border-radius:1rem;
+    background:rgb(19, 19, 19);
+    color:white;
+    height:fit-content;
+    padding:1rem;
+    margin-bottom:2rem;
+}
+#showReviewCard h1{
+    font-size:2rem;
+    margin-bottom:2rem;
+}
+.reviewCreatedAt{
+    font-size:0.7rem;
+    margin-top:1rem;
+}
+.individualReview{
+    background:rgb(30, 30, 30);
+    width:80%;
+    margin:auto;
+    margin-bottom:2rem;
+    height:fit-content;
+}
+.displayTable{
+    display:table;
+}
+.reviewUsername{
+    border-right:0.1rem solid grey;
+    text-align: center;
+    display:table-cell;
+    vertical-align: middle;
+    font-weight:600;
+    font-size:1.3rem;
+}
+.reviewContent{
+    padding:2rem;
+    font-size:1rem;
+    font-weight:400;
+}
+.reviewRating{
+    margin-bottom:1rem;
+}

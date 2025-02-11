@@ -1,0 +1,153 @@
+@charset "utf-8";
+
+/* HEADER */
+.header{
+    background: url('../images/alleyway2.png');
+    background-size:cover;
+    height: 100vh;
+}
+.header div{
+    padding-top: 75vh;
+}
+.neon{
+    font-family: 'Monoton', cursive;
+    font-size:130px;
+    color: #FFD5FF;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 400;
+    letter-spacing: 8px;
+    text-shadow: 1px 0px 4px #FFD5FF, 2px 0px 4px #FFD5FF, 3px 0px 4px #FFD5FF, 2px 0px 3px #D42CCA, 2px 3px 15px #D42CCA, 2px 0px 15px, 5px 0px 125px, 20px 0vw 200px #D42CCA,40px 0vw 200px #D42CCA;
+}
+  
+.flicker-slow{
+    animation: flicker 9s linear infinite;
+}
+  
+.flicker-fast{
+    animation: flicker 3s linear infinite;
+}
+  
+@keyframes flicker {
+    0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+    /* text-shadow: none; */
+    opacity: .99;
+          
+    }
+    20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+        opacity: 0.4;
+    }
+}
+
+/* BODY */
+.carousel{
+    height: 25rem;
+}
+.carousel-item img{
+    height: 25rem;
+    object-fit: cover;
+}
+/* GAMES */
+.games{
+    background:url('../images/arcanelake.png');
+    background-size:cover;
+    height:fit-content;
+    min-height:120vh;
+    background-attachment:fixed;
+    box-shadow: inset 0rem 6rem 3rem 2rem rgba(0,0,0,0.8);
+    padding-top:5rem;
+}
+/* FILTER BAR */
+.games .filterbar{
+    height: 100vh;
+    border-radius:0.5rem;
+    background: rgb(0, 0, 0);
+    color: white;
+    opacity:95%;
+    margin-top:3rem;
+    top:0;
+    position:sticky;
+}
+.games .filterbar h1{
+    font-weight:200;
+    font-size:1.5rem;
+}
+.games .filterbar h2{
+    font-weight:600;
+    font-size:0.9rem;
+    padding-top:1rem;
+}
+.games .filterbar label{
+    font-size: 0.9rem;
+    padding-left:0.3rem;
+}
+.games #searchBar{
+    background:#d7d7d7;
+    width:95%;
+    border-radius:0.5rem;
+    margin-top:1rem;
+    padding-left:0.5rem;
+}
+.games #applyFilters{
+    font-size:0.9rem;
+    margin-top:1rem;
+    margin-bottom:1rem;
+}
+/* GAMES LISTING */
+.gamesListing{
+    margin:2rem;
+    background: rgb(15, 15, 15);
+    opacity: 90%;
+    height:fit-content;
+    border-radius:0.5rem;
+    color: white;
+    margin-top:3rem;
+}
+.gamesHeading{
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    padding-bottom:3rem;
+}
+.gamesHeading h1{
+    padding-bottom: 1.4rem;
+    border-bottom: 0.2rem solid white;
+    width:60%;
+    margin: auto;
+    text-align: center;
+}
+.gamesListing img{
+    height:8rem;
+}
+.gamesListing h3{
+    padding-top:1rem;
+    transition: transform 100ms ease-in-out;
+}
+.gamesListing p{
+    margin-bottom:2rem;
+}
+.gamesListing a{
+    text-decoration: none;
+    color: white;
+    padding-left:2rem;
+    padding-right:2rem;
+    height:8rem;
+    margin-bottom:1rem;
+}
+.gamesListing a div{
+    border-radius:0.4rem;
+    transition: transform 300ms ease-in-out;
+}
+.gamesListing a > div:hover{
+    background: rgb(45, 45, 45);
+    transform: translate(0.8rem);
+    padding-right: -0.8rem;
+    transition: transform 150ms ease-in-out;
+}
+.gamesListing .gamePrice{
+    float:right;
+    padding-right:3rem;
+    font-weight:500;
+}

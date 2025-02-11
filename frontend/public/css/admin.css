@@ -1,0 +1,163 @@
+@charset "utf-8";
+
+body{
+    background:rgb(25, 25, 25);
+    color:white;
+}
+
+/* HEADER */
+.header {
+    background: url('../images/dimmedarcaneoverlook.png');
+    background-size:cover;
+    height: 80vh;
+}
+.header h1{
+    color:rgb(243, 243, 243);
+    font-family:'Nanum Myeongjo';
+    font-size: 5rem;
+    margin-top:10rem;
+}
+/* BODY */
+p{
+    font-size:1.2rem;
+    font-weight:400;
+}
+/* Pagination */
+.paginationButton{
+    margin:0.5rem;
+    margin-top:6rem;
+}
+/* Form Styles */
+.heading{
+    padding-top:3rem;
+}
+h1{
+    font-family:'Poppins';
+    font-weight:400;
+    font-size:3.4rem;
+    padding-bottom: 3rem;
+}
+.addGame label, .addPlatform label, .addGame h4{
+    font-family:'Poppins';
+    font-weight:500;
+    font-size:1.1rem;
+}
+.addGame input, .addGame textarea, .addPlatform input, .addPlatform textarea{
+    background:rgb(225, 225, 225);
+    border-radius:0.4rem;
+    padding-left:0.5rem;
+    margin-bottom:1.6rem;
+}
+.addGame input{
+    height:2rem;
+    width:20rem;
+}
+.addGame .newGamePlatformCheckbox{
+    width:1rem;
+    height:1rem;
+    margin-top:0.6rem;
+    margin-right:0.3rem;
+}
+.addGame .newGamePlatformLabel{
+    margin-top:-2rem;
+}
+input:focus, textarea:focus{
+    background:rgb(255, 255, 255);
+}
+.formElements{
+    text-align: center;
+}
+.addGame select{
+    width: 75%;
+}
+.select2-results{
+    color:black;
+    font-weight:400;
+}
+.addGameForm{
+    margin-left:10rem;
+    margin-right:10rem;
+}
+.addGame, .addPlatform{
+    padding-bottom: 7rem;
+}
+.addGame .newGamePrice{
+    width:6rem;
+    height:1.8rem;
+}
+.addGame .platformAndPriceDiv{
+    padding-left:2.5rem;
+    padding-right:2.5rem;
+}
+.addGameForm select{
+    background:white;
+    height: 1.8rem;
+    border-radius:0.5rem;
+}
+/* List Games */
+.listGamesDiv{
+    background:rgb(250, 242, 215);
+    color:black;
+    border-radius:1rem;
+    margin-bottom: 5rem;
+}
+.listGamesDiv h1{
+    padding-top:4rem;
+    color:black;
+}
+.gamesListingEntries{
+    overflow-y: scroll;
+    height:25rem;
+    margin-bottom:2rem;
+}
+.listGamesDiv input, .listGamesDiv select{
+    background: rgb(255, 255, 255);
+    border-radius:1rem;
+    padding-left:1rem;
+}
+.listGames .platformAndPriceDiv input{
+    width:auto;
+}
+.listGamesDiv label{
+    font-weight:500;
+}
+.listGamesDiv #searchBar, .listGamesDiv .filterCategories, .listGamesDiv .filterPlatforms{
+    margin-left:1rem;
+}
+.listGamesDiv #searchbar button{
+    margin-left:9rem;
+}
+.listGamesDiv .filterbar{
+    margin-bottom: 0.1rem;
+    background:rgb(210, 210, 210);
+    padding-top:0.6rem;
+    padding-bottom:0.5rem;
+    border-radius:0.5rem;
+}
+.listGamesDiv .filterOption{
+    width:10rem;
+}
+.listGamesDiv button{
+    margin-left:2rem;
+}
+.gameAnchor{
+    background:black;
+    color:white;
+    padding-top:0.5rem;
+    padding-bottom:0.5rem;
+}
+.gameAnchor:hover{
+    background:rgb(38, 38, 38);
+    text-decoration: none;
+    color:white;
+}
+.gameAnchor .gamePrice{
+    margin-left:0.6rem;
+}
+.gameListingButtons{
+    align-self:center;
+}
+.gameListingButtons button{
+    height:3rem;
+    margin-bottom: 2rem;
+}

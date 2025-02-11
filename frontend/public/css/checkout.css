@@ -1,0 +1,75 @@
+label{
+    font-weight:400;
+    display:block;
+}
+input{
+    border:0.1rem solid black;
+    border-radius:0.3rem;
+    margin-bottom:1rem;
+}
+div{
+    display:block;
+}
+h1{
+    text-align: center;
+    margin-top:2rem;
+}
+form{
+    margin:auto;
+    margin-top:2rem;
+    padding:1rem;
+    border:0.1rem solid black;
+    border-radius:1rem;
+    width:20rem;
+}
+#checkoutDiv{
+    height:28rem;
+}
+#successDiv{
+    margin:auto;
+}
+#successDiv img{
+    width:15rem;
+    display:block;
+    margin:auto;
+    margin-top:2rem;
+    margin-bottom:5rem;
+}
+#noItemsDiv, #successDiv{
+    height:25rem;
+}
+#noItemsDiv{
+    width:50rem;
+    margin:auto;
+    margin-top:5rem;
+}
+/* Estilos para el menú desplegable */
+#cardType {
+    width: 100%;
+    padding: 8px;
+    border:0.1rem solid black;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 16px;
+}
+
+/* Estilos para las opciones */
+#cardType option {
+    padding: 8px;
+}
+/* Estilos para el botón de volver a la tienda */
+#successDiv button {
+    display: block;
+    margin: 20px auto; /* Centrar el botón */
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #04b822; /* Color azul */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#successDiv button:hover {
+    background-color: #00ff66; /* Color azul más oscuro al pasar el mouse */
+}

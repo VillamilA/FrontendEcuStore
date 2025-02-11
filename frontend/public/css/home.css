@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+.content{
+    color: white;
+}
+
+/* HEADER */
+.header{
+    background: url("../images/dimmedpurplelofi.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    height: 120vh;
+    font-size: 10rem;
+}
+.header div{
+    padding-top: 25vh;
+}
+.header img{
+    height:10rem;
+    padding-right:1rem;
+}
+.header h1{
+    font-weight:400;
+    font-size:6rem;
+    font-family: 'Nanum Myeongjo';
+    color: white;
+}
+.header #textSP{
+    color:red;
+    padding-top:1rem;
+}
+.header #textSLASH{
+    color:red;
+    font-size:9rem;
+    font-family:'Poppins';
+    font-weight:100;
+}
+.header #textGAMES{
+    padding-top:1rem;
+}
+
+/* BODY */
+.body{
+    background:white;
+    background-size:cover;
+    background-attachment: fixed;
+    font-family: 'Montserrat', sans-serif;
+}
+.preslant{
+    height:12rem;
+    background:black;
+}
+.slant{
+    height:6rem;
+    background:black;
+    transform: skewY(3deg);
+    margin-top:-3rem;
+}
+.body .aboutUs{
+    height: 30rem;
+    padding-top: 4rem;
+    padding-left: 4rem;
+    color:black;
+    font-weight: 400;
+}
+.body h1{
+    font-size: 3.8rem;
+    font-weight: 500;
+}
+.body button{
+    margin-top: 1rem;
+    margin-left: 0.2rem;
+    font-size:1.3rem;
+}
+

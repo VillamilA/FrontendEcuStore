@@ -1,0 +1,97 @@
+@charset "utf-8";
+
+@charset "UTF-8";
+
+/* reset styles */
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    background: transparent;
+    transition: none;
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+
+/* body properties */
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;   
+    /* overflow-x: hidden; */
+}
+
+/* -------------------------Navbar------------------------- */
+nav{
+    transition: top 0.3s;
+    z-index: 2;
+    background-color: black;
+    height: 12vh;
+}
+.navbarFont{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+.navbar-brand img{
+    height: 9vh;
+    margin-right: 0.6rem
+}
+.navbar-brand{
+    padding-right: 5vh;
+    font-weight: 400;
+    font-family: 'Nanum Myeongjo'
+}
+.navbar #SP{
+    color:red;
+}
+.navbar #slash{
+    color:red;
+    font-size:1.5rem;
+    font-family:'Poppins';
+    font-weight:100;
+}
+.navlogin, .navlogout, #myCart{
+    color:grey;
+}
+nav li:hover, .navlogin:hover, .navlogout:hover, #myCart:hover{
+    transform: scale(0.9);
+    transition: all 0.15s;
+    color: white;
+}
+/*-------------------------Footer-------------------------*/
+footer{
+    height: 40vh;
+    background-color:black;
+    color:white;
+    font-weight: 200;
+}
+footer h1{
+    font-size:2rem;
+    padding-left:3rem;
+    padding-top:3rem;
+}
+footer h2{
+    font-size:1.3rem;
+    font-weight:100;
+    padding-left:3rem;
+}
+footer p{
+    font-size:0.8rem;
+    margin-left:3rem;
+    margin-top: 3rem;
+}
+footer ul{
+    padding-left: -2rem;
+    padding-top:3rem;
+}
+.socialicon{
+    float: left;
+    height: 2.4rem;
+    transition: all .1s ease-in-out;
+    margin: 0.5rem;
+}
+.socialicon:hover{
+    transform: scale(1.15);
+}
